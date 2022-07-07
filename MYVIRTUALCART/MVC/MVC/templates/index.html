@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>MY VIRTUAL CART</title>
+     <style>
+       .jumbotron{
+       background-color:#FCE4EC;
+       height:460px;
+       width:auto;
+       margin-top:0px;
+
+       }
+ .head{
+ color:#42A5F5;
+ }
+
+  </style>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link text-white navbar-brand" href="/">MyVirtualCart</a>
+      </li>
+<!--      <li class="nav-item active">-->
+<!--        <a class="nav-link text-white navbar-brand" href="/shop">Shop Now <span class="sr-only">(current)</span></a>-->
+<!--      </li>-->
+      <li class="nav-item">
+        <a class="nav-link text-white navbar-brand" href="/shop/about">About Us</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link text-white navbar-brand" href="/shop/contact">Contact Us</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link text-white navbar-brand" href="/shop/tracker">Tracking Order</a>
+      </li>
+
+<!-- <li class="nav-item">-->
+<!--        <a class="nav-link text-white navbar-brand" href="http://127.0.0.1:8000/admin/">Admin Panel</a>-->
+<!--      </li>-->
+
+    </ul>
+    <form method='get' action='/shop/search/' class="form-inline my-2 my-lg-0" >
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search" id="search">
+      <button class="btn btn-outline-success my-1 mx-2 my-sm-0" type="submit">Search</button>
+    </form>
+
+   <button type="button" class="btn btn-outline-success ml-1 mr-1 "  ><a href="http://127.0.0.1:8000/admin/">
+Admin Panel</a>
+</button>
+
+<!--<button type="button" class="btn btn-outline-success mr-0" data-toggle="modal" data-target="#signupModal">-->
+<!--&lt;!&ndash;<a href="/shop/auth">SignUp</a>&ndash;&gt;-->
+<!--SignUp-->
+<!--</button>-->
+
+  </div>
+</nav>
+
+
+      {% block body %}  {% endblock body %}
+
+  <body class="bdyclr mt-0 ">
+
+    <div class="jumbotron pt-4">
+        <center class="display-3 head"><b>MY VIRTUAL CART</b></center>
+<!--      <h1 class="display-3"><b>MY VIRTUAL CART</b></h1>-->
+  <p class="lead" style="color:#29B6F6;">Sometimes you don’t need a reason for shopping.</p>
+  <p class="lead" style="color:#29B6F6;">“Selling Dreams, Creating Lifestyles!”</p>
+  <hr class="my-5">
+  <ul class="lead" style="color:#FFAB00">
+    <li><h4>An exciting place for the whole family to shop.</h4></li>
+    <li><h4>Discover the difference and Your favourite place.</h4></li>
+    <li><h4>Life is hard enough already. So we make it a little easier for you.</h4></li>
+      <li><h4>Transforming shopping into an experience.</h4></li>
+
+  </ul>
+
+        <div class="text-center">
+      <a class="btn btn-outline-success my-2 my-sm-0" href="/shop" role="button">SHOP NOW</a>
+</div>
+</div>
+<center>
+    <h1><u><b>Reason Behind to choose us</b></u></h1>
+      <div>
+     <div class="card mb-3 border-dark" style="max-width: 1000px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fG9mZmljZSUyMG1lZXRpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title text-secondary"><u>We are always on Time</u></h5>
+        <p class="card-text text-success">
+          The importance of being on time shows your reliability. If you show competence and responsibility when you’re entrusted with little, then you will exhibit to you superiors that you can likely to be entrusted with more.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+          <div class="card mb-3" style="max-width: 1000px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8b2ZmaWNlJTIwbWVldGluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body ">
+        <h5 class="card-title text-primary"><u>We Works Together</u></h5>
+        <p class="card-text text-success">Teamwork is working together of people to achieve a certain goal. Teamwork is the basic need for an organization to function. Furthermore, every organization has a division of several teams to perform specific tasks.
+
+          Without teamwork nothing is possible. Moreover, if any organization lacks teamwork. Then it will hamper its success rate. Thus the organization will fall. Also, it will affect the environment the people are working in.
+
+          </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+          <div class="card border-dark mb-3" style="max-width: 1000px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="https://images.unsplash.com/photo-1622675363311-3e1904dc1885?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8b2ZmaWNlJTIwbWVldGluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title text-danger"><u>Working with highly Professionals</u></h5>
+        <p class="card-text text-success">Professionalism encompasses the way an employee interacts with other people, including coworkers, customers and supervisors. “Professionalism includes speaking with your colleagues in a respectful manner, conducting yourself with integrity and being courteous.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+          <div class="card mb-3" style="max-width: 1000px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="https://images.unsplash.com/photo-1641134301517-a2a338aba1cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGNoZWFwfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title text-warning"><u>Low Price</u></h5>
+        <p class="card-text text-success">Low-cost strategy allows a company to gain a competitive advantage against their competitors in the commodity markets. It also undercuts its rivals on price. Oftentimes, companies are able to gain a high market share due to low cost.</p>
+      </div>
+    </div>
+  </div>
+</div>
+          <div class="card border-dark mb-3" style="max-width: 1000px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="https://media.istockphoto.com/photos/premium-quality-picture-id184973143?k=20&m=184973143&s=612x612&w=0&h=NRujnv3lZXBFwM9LSE4xGJ_9lq9gza1Kzq-eTdPvN_4=" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title text-info"><u>Premium Quality</u></h5>
+        <p class="card-text text-success">We offer a combination of supreme quality, value, purpose, and exceptional experience.</p>
+
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+</center>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<script>
+
+
+    function myFunction() {
+        alert("You are now Registered!");
+    }
+    </script>

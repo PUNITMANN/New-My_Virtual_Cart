@@ -1,0 +1,96 @@
+{% extends 'shop/basic.html' %}
+
+{% block title%} Contact Us - My Virtual Cart{% endblock %}
+{% block css %}
+div{
+<!--        font-size: 20px;-->
+<!--        }-->
+        .texts{
+            border: 2px solid black;
+            width: 1000px;
+            height: 40px;
+
+            z-index: 1;
+        }
+        .describe{
+            border: 2px solid black;
+            width: 700px;
+            height: 200px;
+            text-align:start;
+
+        }
+        .container{
+            display: grid;
+            align-content: center;
+            justify-content: center;
+            width: 100%;
+            height:680px;
+            
+            margin-top:20px;
+            padding:0px 0px 0px 0px;
+        }
+        
+
+{% endblock %}
+
+{% block body %}
+<div class="container">
+<div class="fullform">
+    <form action="/" method="post">{% csrf_token %}
+        <h1 class="text-success"><b><u>PLEASE ENTER YOUR DETAILS HERE</u></b></h1>
+        <div>
+        <label for="name" class="text-danger">Name</label><br>
+        <input class="texts text-primary" type="text" id="name" name='name' placeholder="Enter Your Name">
+        </div>
+        <br>
+
+        <div>
+        <label for="name" class="text-danger">Email</label><br>
+        <input class="texts text-primary" type="email" id="email" name='email' placeholder="Enter Your Email">
+        </div>
+        <br>
+
+        <div>
+        <label for="name" class="text-danger">Phone Number:</label><br>
+        <input class="texts text-primary" type="number" name='phone' id="phone" placeholder="Enter Your Contact Number">
+        </div>
+        <br>
+
+        <div>
+        <label for="desc" class="text-danger">How May We Help You?</label><br>
+        <textarea class="describe text-primary" name='desc' id="desc" rows="9" placeholder="How May We Help You..."></textarea>
+        </div>
+
+        <div>
+        <input type="submit" value="submit" class="btn btn-outline-success my-2 my-sm-0" onclick="myFunction()" >
+        </div>
+
+
+    </form>
+</div>
+</div>
+{% endblock %}
+
+{% block js %}
+<script>
+
+
+    function myFunction() {
+        alert("Your Form has been Successfully Submitted !");
+    }
+    </script>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+

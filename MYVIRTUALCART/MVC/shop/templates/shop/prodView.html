@@ -1,0 +1,160 @@
+{% extends 'shop/basic.html' %}
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">-->
+
+{% block title%} {{product.product_name}} - MY VIRTUAL CART{% endblock %}
+{% block css %}
+.space{
+padding:20px;
+margin-left:35px;
+margin-top:5px;
+margin-right:5px;
+}
+.imgd{
+border:5px solid yellow;
+width:250px;
+height:400px;
+}
+h3{
+    color:#0091EA
+}
+h2{
+    color:#00E676
+}
+h4{
+    color:#F44336
+}
+
+.dropbtn {
+<!--  background-color: #04AA6D;-->
+<!--  color: white;-->
+  padding: 60px;
+  font-size: 35px;
+<!--  border: none;-->
+<!--margin-top:40px;-->
+
+
+}
+
+/* The container - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+margin-top:48px;
+
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover
+.dropbtn {background-color: #3e8e41;
+
+}
+
+
+{% endblock %}
+
+{% block body %}
+<div class="container my-5">
+    <div class="row">
+    <div class="col-md-4">
+    <div class="row">
+        <img class="imgd" src="/media/{{product.image}}" >
+    </div>
+        <div class="row">
+            <button class="btn btn-outline-success my-1 my-sm-5 space">Buy Now</button>
+
+<!--            <button class="btn btn-outline-success my-1 my-sm-5 space">Add To Cart</button>-->
+            <div class="dropdown ">
+  <button class="dropbtn btn btn-outline-success ">Share</button>
+  <div class="dropdown-content">
+
+    <a href="#">Facebook</a>
+    <a href="#">Twitter</a>
+    <a href="#">Whatsapp</a>
+  </div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="col-md-8">
+        <h2 class="my-5 "><u>{{product.product_name}}</u></h2><hr>
+        <h3><b>Price : Rs.{{product.price}} </b></h3><br><hr>
+        <h4>Description &#128071; <br><br> {{product.desc}}</h4>
+
+
+    </div>
+    </div>
+
+
+</div>
+
+
+
+
+{% endblock %}
+
+
+
+
+{% block js %}
+<script>
+
+console.log('working');
+
+if(localStorage.getItem('cart') == null){
+var cart = {};
+}
+
+else
+{
+cart = JSON.parse(localStorage.getItem('cart'));
+document.getElementById('cart').innerHTML = Object.keys(cart).length;
+}
+
+$('.cart').click(function(){
+
+console.log('clicked');
+var idstr = this.id.toString();
+console.log(idstr);
+if (cart[idstr] !=undefined){
+cart[idstr] = cart[idstr] + 1;
+}
+else
+{
+cart[idstr] = 1;
+}
+console.log(cart);
+localStorage.setItem('cart', JSON.stringify(cart));
+document.getElementById('cart').innerHTML = Object.keys(cart).length;
+});
+$('#popcart').popover();
+
+document.getElementById("popcart").setAttribute('data-content', '<h5>Cart for your items in my shopping cart</h5>');
+
+</script>
+{% endblock %}
